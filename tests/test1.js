@@ -1,0 +1,23 @@
+Feature('category');
+Scenario('navigation bar category test',({I}) => {
+    I.amOnPage('https://cars-pre.tvbs.com.tw/');
+    I.wait(2);
+    I.click('車壇新訊');
+    I.see('分類選單');
+    I.amOnPage('https://cars-pre.tvbs.com.tw/');
+    I.wait(2);
+    I.click('超夯話題');
+    I.see('分類選單');
+    I.amOnPage('https://cars-pre.tvbs.com.tw/');
+    I.wait(2);
+    I.click('電視節目');
+    I.see('分類選單');
+    I.amOnPage('https://cars-pre.tvbs.com.tw/');
+    I.wait(2);
+    I.click('黃金試車組');
+    I.see('分類選單');
+    I.amOnPage('https://cars-pre.tvbs.com.tw/');
+    I.wait(2);
+    I.click('達人談車');
+    I.see('分類選單');
+});
