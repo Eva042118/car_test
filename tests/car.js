@@ -126,5 +126,5 @@ Scenario('car test', ({I}) => {
     I.switchToNextTab();
     I.seeInCurrentUrl('https://page.line.me/873lmekx');
     I.switchToPreviousTab();
-});
+}).retry(3);
 

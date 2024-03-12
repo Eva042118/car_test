@@ -1,5 +1,20 @@
 Feature('category');
 Scenario('navigation bar category test',async ({I}) => {
+    // I.amOnPage('');
+    // // I.moveCursorTo('//html/body/header/div/div[2]/div[1]/ul/a/li[1]');
+    // I.wait(2);
+    // I.moveCursorTo('.w-auto');
+    // I.click('國內要聞');
+    // I.seeInCurrentUrl('https://cars.tvbs.com.tw/category/car-news/local-news');
+    I.amOnPage('http://localhost:3001/');
+    I.moveCursorTo('#car-news');
+    I.click('國內車訊');
+    I.seeInCurrentUrl('https://cars-pre.tvbs.com.tw/category/car-news');
+    I.amOnPage('http://localhost:3001/');
+    I.moveCursorTo('#gold-test');
+    I.click('試駕報導');
+    I.seeInCurrentUrl('https://cars-pre.tvbs.com.tw/category/gold-test');
     I.amOnPage('');
-    I.click('hotcar-item-anchor');
+    I.click('[alt="search"]');
+    I.see('熱門關鍵字');
 });
