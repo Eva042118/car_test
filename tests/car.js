@@ -121,28 +121,28 @@ Scenario('Navigation bar test', ({I}) => {
 Scenario('Social button', ({I}) => {
     // facebook
     I.amOnPage('/');
-    I.click('fb-button');
+    I.click(locator.social.fb);
     I.wait(2);
     I.switchToNextTab();
-    I.seeInCurrentUrl('https://www.facebook.com/56goldline');
+    I.seeInCurrentUrl(verify.social.fb);
     I.closeCurrentTab();
     // youtube
-    I.click('youtube-button');
+    I.click(locator.social.youtube);
     I.wait(2);
     I.switchToNextTab();
-    I.seeInCurrentUrl('https://www.youtube.com/channel/UCI4i_uldRR6zTLjWTEL8glQ');
+    I.seeInCurrentUrl(verify.social.youtube);
     I.closeCurrentTab();
     // instagram
-    I.click('ig-button');
+    I.click(locator.social.ig);
     I.wait(2);
     I.switchToNextTab();
-    I.seeInCurrentUrl('https://www.instagram.com/tvbsgoldline56/');
+    I.seeInCurrentUrl(verify.social.ig);
     I.closeCurrentTab();
     // line
-    I.click('line-button');
+    I.click(locator.social.line);
     I.wait(2);
     I.switchToNextTab();
-    I.seeInCurrentUrl('https://page.line.me/873lmekx');
+    I.seeInCurrentUrl(verify.social.line);
     I.closeCurrentTab();
 }).retry(3);
 // Scenario('Car spec', ({I}) => {
@@ -155,22 +155,22 @@ Scenario('Tools', ({I}) => {
     // 黃金助手
     // 即時熱門景點
     I.amOnPage('/');
-    I.click('即時熱門景點');
+    I.click(locator.tools.attractons);
     I.wait(2);
     I.switchToNextTab();
-    I.seeInCurrentUrl('https://news.tvbs.com.tw/events/attractions?from=goldline');
+    I.seeInCurrentUrl(verify.tools.attractons);
     I.closeCurrentTab();
     // 國道即時路況
-    I.click('國道即時路況');
+    I.click(locator.tools.freeway);
     I.wait(2);
     I.switchToNextTab();
-    I.seeInCurrentUrl('https://news.tvbs.com.tw/events/freeway?from=goldline');
+    I.seeInCurrentUrl(verify.tools.freeway);
     I.closeCurrentTab();
     // 監理服務網
-    I.click('監理服務網');
+    I.click(locator.tools.mvdis);
     I.wait(2);
     I.switchToNextTab();
-    I.seeInCurrentUrl('https://www.mvdis.gov.tw/#gsc.tab=0');
+    I.seeInCurrentUrl(verify.tools.mvdis);
     I.closeCurrentTab();
 }).retry(3); 
 Scenario('Index', ({I}) => {

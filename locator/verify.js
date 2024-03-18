@@ -31,6 +31,22 @@ const navigation = {
     carshow: 'https://cars.tvbs.com.tw/category/carshow',
     goldlineweb: 'https://cars.tvbs.com.tw/event/goldcar?form=goldlineweb'
 }
+
+const social = {
+    fb: 'https://www.facebook.com/56goldline',
+    youtube: 'https://www.youtube.com/channel/UCI4i_uldRR6zTLjWTEL8glQ',
+    ig: 'https://www.instagram.com/tvbsgoldline56/',
+    line: 'https://page.line.me/873lmekx'
+}
+
+const tools = {
+    attractons: 'https://news.tvbs.com.tw/events/attractions?from=goldline',
+    freeway: 'https://news.tvbs.com.tw/events/freeway?from=goldline',
+    mvdis: 'https://www.mvdis.gov.tw/#gsc.tab=0'
+}
+
 module.exports = {
-    navigation
+    navigation,
+    social,
+    tools
 }

@@ -29,6 +29,22 @@ const navigation = {
     carshow: '車展專區',
     goldlineweb: '2024金CAR獎'
 }
+
+const social = {
+    fb: 'fb-button',
+    youtube: 'youtube-button',
+    ig: 'ig-button',
+    line: 'line-button'
+}
+
+const tools = {
+    attractons: '即時熱門景點',
+    freeway: '國道即時路況',
+    mvdis: '監理服務網'
+}
+
 module.exports = {
-    navigation
+    navigation,
+    social,
+    tools
 }
