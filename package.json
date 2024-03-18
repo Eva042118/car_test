@@ -1,4 +1,8 @@
 {
+  "version": "1.0",
+  "scripts": {
+    "run_test": "codeceptjs run tests/car.js --steps"
+  },
   "dependencies": {
     "codeceptjs": "^3.5.12",
     "playwright": "^1.41.2",

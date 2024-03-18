@@ -1,20 +1,14 @@
 Feature('category');
 Scenario('navigation bar category test',async ({I}) => {
-    // I.amOnPage('');
-    // // I.moveCursorTo('//html/body/header/div/div[2]/div[1]/ul/a/li[1]');
-    // I.wait(2);
-    // I.moveCursorTo('.w-auto');
-    // I.click('國內要聞');
-    // I.seeInCurrentUrl('https://cars.tvbs.com.tw/category/car-news/local-news');
-    I.amOnPage('http://localhost:3001/');
-    I.moveCursorTo('#car-news');
-    I.click('國內車訊');
-    I.seeInCurrentUrl('https://cars-pre.tvbs.com.tw/category/car-news');
-    I.amOnPage('http://localhost:3001/');
-    I.moveCursorTo('#gold-test');
-    I.click('試駕報導');
-    I.seeInCurrentUrl('https://cars-pre.tvbs.com.tw/category/gold-test');
-    I.amOnPage('');
-    I.click('[alt="search"]');
-    I.see('熱門關鍵字');
+    // 車壇新訊
+    I.amOnPage('https://cars.tvbs.com.tw/car-news/176651');
+    I.see('記者');
+    I.see('年');
+    I.see('月');
+    I.see('日');
+    I.see('熱門文章');
+    I.click('//*[@id="primary"]/div[1]/div/div/div[2]/div[2]/div/div/div[1]/a/i');
+    I.wait(2);
+    I.switchToNextTab();
+    I.seeInCurrentUrl('https://www.facebook.com/share_channel/')
 });
