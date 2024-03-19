@@ -15,15 +15,12 @@ export const config: CodeceptJS.MainConfig = {
       windowSize: '1500 x 1024',
       url: 'https://cars.tvbs.com.tw',
       show: true
-    },
-    // Puppeteer: {
-    //   url: 'https://cars.tvbs.com.tw',
-    //   show: false
-    // }
+    }
   },
   include: {
     I: './steps_file',
-    cars: './page/cars.js'
+    cars: './page/cars.js',
+    accountPage: './page/account.js'
   },
   name: 'car_test'
 }

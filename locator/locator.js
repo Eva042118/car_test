@@ -43,8 +43,27 @@ const tools = {
     mvdis: '監理服務網'
 }
 
+const goldcar = {
+    index: '金CAR獎首頁',
+    rule: '投票辦法',
+    adward: '歷屆票選結果',
+    winner: '中獎名單',
+    show: '台北車展直擊',
+    sign_in: '登入'
+}
+
+const account = {
+    sign_in: '//html/body/header/div/div[2]/div[1]',
+    adminEmail: '請輸入註冊 Email',
+    adminPassword: '請輸入密碼',
+    submit: '登入',
+    sign_out: '登出'
+}
+
 module.exports = {
     navigation,
     social,
-    tools
+    tools,
+    goldcar,
+    account
 }

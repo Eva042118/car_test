@@ -44,8 +44,17 @@ const tools = {
     mvdis: `https://www.mvdis.gov.tw/#gsc.tab=0`
 }
 
+const goldcar = {
+    index: 'https://cars.tvbs.com.tw/event/goldcar',
+    rule: 'https://cars.tvbs.com.tw/event/goldcar/rule',
+    adward: 'https://cars.tvbs.com.tw/event/goldcar/adward-product2024',
+    winner: 'https://cars.tvbs.com.tw/event/goldcar/winner',
+    show: 'https://cars.tvbs.com.tw/tag/2024%E5%8F%B0%E5%8C%97%E8%BB%8A%E5%B1%95?from=goldcar'
+}
+
 module.exports = {
     navigation,
     social,
-    tools
+    tools,
+    goldcar
 }
