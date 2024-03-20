@@ -51,10 +51,18 @@ const goldcar = {
     winner: `${host_url}/event/goldcar/winner`,
     show: `${host_url}/tag/2024%E5%8F%B0%E5%8C%97%E8%BB%8A%E5%B1%95?from=goldcar`
 }
+ const spec = {
+    search_car: 'https://cars.tvbs.com.tw/spec/search/brand_name=audi&car_body=wagon&price_min=250&price_max=400&year[]=2023&fuel=hybrid&per_page=12&page=1'
+ }
 
+ const car = {
+    car_page: 'https://cars.tvbs.com.tw/spec/audi/2023-audi-a4-avant'
+ }
 module.exports = {
     navigation,
     social,
     tools,
-    goldcar
+    goldcar,
+    spec,
+    car
 }

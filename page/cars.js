@@ -4,19 +4,20 @@ const verify = require('../locator/verify')
 
 module.exports = {
     navigationbar() {
+        // 車壇新訊
         I.amOnPage('/');
         I.click(locator.navigation.car_news);
         I.seeInCurrentUrl(verify.navigation.car_news);
-        I.see('篇文章');
-        I.see('分類選單');
-        I.see('國內要聞');
-        I.see('國際車訊');
-        I.see('銷售分析');
-        I.see('電動車訊');
-        I.see('機車新聞');
-        I.see('間諜照');
-        I.see('促銷優惠');
-        I.see('熱門文章');
+        I.see(locator.navigation.num);
+        I.see(locator.navigation.category);
+        I.see(locator.navigation.local_news);
+        I.see(locator.navigation.global_news);
+        I.see(locator.navigation.analysis);
+        I.see(locator.navigation.ecarnews);
+        I.see(locator.navigation.bike_news);
+        I.see(locator.navigation.spy_shot);
+        I.see(locator.navigation.promotion);
+        I.see(locator.navigation.hot_article);
         I.amOnPage('/');
         I.moveCursorTo(locator.navigation.car_news);
         I.click(locator.navigation.local_news);
@@ -49,13 +50,13 @@ module.exports = {
         I.amOnPage('/');
         I.click(locator.navigation.video);
         I.seeInCurrentUrl(verify.navigation.video);
-        I.see('篇文章');
-        I.see('分類選單');
-        I.see('節目完整版');
-        I.see('節目精華');
-        I.see('試駕影音');
-        I.see('現場直擊');
-        I.see('熱門文章');
+        I.see(locator.navigation.num);
+        I.see(locator.navigation.category);
+        I.see(locator.navigation.tv_show);
+        I.see(locator.navigation.essence);
+        I.see(locator.navigation.roadtest_video);
+        I.see(locator.navigation.liveview);
+        I.see(locator.navigation.hot_article);
         I.amOnPage('/');
         I.moveCursorTo(locator.navigation.video);
         I.click(locator.navigation.tv_show);
@@ -76,13 +77,13 @@ module.exports = {
         I.amOnPage('/');
         I.click(locator.navigation.life);
         I.seeInCurrentUrl(verify.navigation.life);
-        I.see('篇文章');
-        I.see('分類選單');
-        I.see('生活時事');
-        I.see('熱搜話題');
-        I.see('政策法規');
-        I.see('科技時尚');
-        I.see('熱門文章');
+        I.see(locator.navigation.num);
+        I.see(locator.navigation.category);
+        I.see(locator.navigation.car_life);
+        I.see(locator.navigation.hot);
+        I.see(locator.navigation.policy);
+        I.see(locator.navigation.tech);
+        I.see(locator.navigation.hot_article);
         I.amOnPage('/');
         I.moveCursorTo(locator.navigation.life);
         I.click(locator.navigation.car_life);
@@ -103,12 +104,12 @@ module.exports = {
         I.amOnPage('/');
         I.click(locator.navigation.celebrity);
         I.seeInCurrentUrl(verify.navigation.celebrity);
-        I.see('篇文章');
-        I.see('分類選單');
-        I.see('達人說車');
-        I.see('人車故事');
-        I.see('藝起當老司機');
-        I.see('熱門文章');
+        I.see(locator.navigation.num);
+        I.see(locator.navigation.category);
+        I.see(locator.navigation.talent);
+        I.see(locator.navigation.people_story);
+        I.see(locator.navigation.artist);
+        I.see(locator.navigation.hot_article);
         I.amOnPage('/');
         I.moveCursorTo(locator.navigation.celebrity);
         I.click(locator.navigation.talent);
@@ -125,12 +126,12 @@ module.exports = {
         I.amOnPage('/');
         I.click(locator.navigation.report);
         I.seeInCurrentUrl(verify.navigation.report);
-        I.see('篇文章');
-        I.see('分類選單');
-        I.see('汽車試駕');
-        I.see('電車試駕');
-        I.see('二輪試駕');
-        I.see('熱門文章');
+        I.see(locator.navigation.num);
+        I.see(locator.navigation.category);
+        I.see(locator.navigation.car_roadtest);
+        I.see(locator.navigation.electric);
+        I.see(locator.navigation.bike_roadtest);
+        I.see(locator.navigation.hot_article);
         I.amOnPage('/');
         I.moveCursorTo(locator.navigation.report);
         I.click(locator.navigation.car_roadtest);
@@ -144,32 +145,39 @@ module.exports = {
         I.click(locator.navigation.bike_roadtest);
         I.seeInCurrentUrl(verify.navigation.bike_roadtest);
         // 更多
+        // 車展專區
         I.amOnPage('/');
         I.moveCursorTo(locator.navigation.more);
         I.click(locator.navigation.carshow);
         I.seeInCurrentUrl(verify.navigation.carshow);
-        I.see('篇文章');
-        I.see('分類選單');
-        I.see('2021 IAA慕尼黑車展');
-        I.see('2021上海車展');
-        I.see('2022線上車展');
-        I.see('2023 IAA慕尼黑車展');
-        I.see('2024 CES');
-        I.see('2024台北車展');
-        I.see('熱門文章');
+        I.see(locator.show.num);
+        I.see(locator.show.category);
+        I.see(locator.show.show_1);
+        I.see(locator.show.show_2);
+        I.see(locator.show.show_3);
+        I.see(locator.show.show_4);
+        I.see(locator.show.show_5);
+        I.see(locator.show.show_6);
+        I.see(locator.show.hot_article);
+        // 2024金CAR獎
         I.amOnPage('/');
-        I.moveCursorTo('//html/body/header/div/div[2]/div[6]/ul/a/li[1]');
+        I.moveCursorTo(locator.navigation.more);
         I.click(locator.navigation.goldlineweb);
         I.wait(2);
         I.seeInCurrentUrl(verify.navigation.goldlineweb);
+        // 2024金CAR獎-首頁
         I.click(locator.goldcar.index);
         I.seeInCurrentUrl(verify.goldcar.index);
+        // 2024金CAR獎-投票辦法
         I.click(locator.goldcar.rule);
         I.seeInCurrentUrl(verify.goldcar.rule);
+        // 2024金CAR獎-歷屆票選結果
         I.click(locator.goldcar.adward);
         I.seeInCurrentUrl(verify.goldcar.adward);
+        // 2024金CAR獎-中獎名單
         I.click(locator.goldcar.winner);
         I.seeInCurrentUrl(verify.goldcar.winner);
+        // 2024金CAR獎-台北車展直擊
         I.click(locator.goldcar.show);
         I.wait(2);
         I.switchToNextTab();
@@ -179,24 +187,25 @@ module.exports = {
     },
     socialbtn() {
         I.amOnPage('/');
+        // Facebook社群按鈕
         I.click(locator.social.fb);
         I.wait(2);
         I.switchToNextTab();
         I.seeInCurrentUrl(verify.social.fb);
         I.closeCurrentTab();
-        // youtube
+        // Youtube社群按鈕
         I.click(locator.social.youtube);
         I.wait(2);
         I.switchToNextTab();
         I.seeInCurrentUrl(verify.social.youtube);
         I.closeCurrentTab();
-        // instagram
+        // Instagram社群按鈕
         I.click(locator.social.ig);
         I.wait(2);
         I.switchToNextTab();
         I.seeInCurrentUrl(verify.social.ig);
         I.closeCurrentTab();
-        // line
+        // Line社群按鈕
         I.click(locator.social.line);
         I.wait(2);
         I.switchToNextTab();
@@ -205,6 +214,7 @@ module.exports = {
     },
     tools() {
         I.amOnPage('/');
+        // 即時熱門景點
         I.click(locator.tools.attractons);
         I.wait(2);
         I.switchToNextTab();
@@ -222,5 +232,49 @@ module.exports = {
         I.switchToNextTab();
         I.seeInCurrentUrl(verify.tools.mvdis);
         I.closeCurrentTab();
+    },
+    spec_index() {
+        // 首頁上的汽車規格查詢
+        I.amOnPage('/');
+        // 品牌
+        I.click(locator.spec.brand);
+        I.click(locator.spec.brand_opt);
+        // 能源
+        I.fillField(locator.spec.fuel, locator.spec.fuel_opt);
+        I.pressKey(['Enter']);
+        // 年份
+        I.fillField(locator.spec.year, locator.spec.year_opt);
+        I.pressKey(['Enter']);
+        // 價格
+        I.fillField(locator.spec.price, locator.spec.price_opt);
+        I.pressKey(['Enter']);
+        // 車型
+        I.click(locator.spec.body_opt);
+        // 搜尋
+        I.click(locator.spec.submit);
+        I.seeInCurrentUrl(verify.spec.search_car);
+        I.see(locator.spec.result);
+        I.see('AUDI');
+        I.see(locator.spec.num);
+        I.see('A4 Avant');
+    },
+    car_page() {
+        // 車款頁面
+        I.amOnPage(verify.car.car_page);
+        I.see(locator.car.spec);
+        I.see(locator.car.power);
+        I.see(locator.car.chassis);
+        I.see(locator.car.body);
+        I.see(locator.car.hot_roadtest);
+        I.see(locator.car.other);
+        I.see(locator.car.appearance);
+        I.see(locator.car.interior);
+        I.see(locator.car.video);
+        I.see(locator.car.convenience);
+        I.see(locator.car.safety);
+        I.click(locator.car.article);
+        I.see(locator.car.more);
+        I.click(locator.car.car_video);
+        I.see(locator.car.more);
     }
 }

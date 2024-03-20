@@ -9,5 +9,7 @@ module.exports = {
         I.fillField(locator.account.adminEmail, email);
         I.fillField(locator.account.adminPassword, password);
         I.click(locator.account.submit);
+        I.wait(2);
+        I.see(locator.account.sign_out);
     }
 }

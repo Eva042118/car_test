@@ -27,7 +27,22 @@ const navigation = {
     bike_roadtest: '二輪試駕',
     more: '//html/body/header/div/div[2]/div[6]/ul/a/li[1]',
     carshow: '車展專區',
-    goldlineweb: '2024金CAR獎'
+    goldlineweb: '2024金CAR獎',
+    num: '篇文章',
+    category: '分類選單',
+    hot_article: '熱門文章'
+}
+
+const show = {
+    num: '篇文章',
+    category: '分類選單',
+    show_1: '2021 IAA慕尼黑車展',
+    show_2: '2021上海車展',
+    show_3: '2022線上車展',
+    show_4: '2023 IAA慕尼黑車展',
+    show_5: '2024 CES',
+    show_6: '2024台北車展',
+    hot_article: '熱門文章'
 }
 
 const social = {
@@ -60,10 +75,45 @@ const account = {
     sign_out: '登出'
 }
 
+const spec = {
+    brand: '//html/body/main/div[3]/div[1]/section/div/div[2]/form/div[1]/div[1]/button',
+    brand_opt: '//html/body/main/div[3]/div[1]/section/div/div[2]/form/div[1]/div[1]/div/div[2]/div/div[2]/div[4]',
+    fuel: '選能源',
+    fuel_opt: '油電混合',
+    year: '選年份',
+    year_opt: '2023',
+    price: '選價格',
+    price_opt: '250萬~400萬',
+    body_opt: '//html/body/main/div[3]/div[1]/section/div/div[2]/form/div[3]/div[3]/div[1]/img',
+    submit: '搜尋',
+    result: '搜尋結果',
+    num: '筆'
+}
+
+const car = {
+    spec: '規格表',
+    power: '動力',
+    chassis: '底盤',
+    body: '車體',
+    other: '其他',
+    appearance: '外觀',
+    interior: '內裝',
+    video: '影音',
+    convenience: '便利',
+    safety: '安全',
+    hot_roadtest: '熱門試駕',
+    article: '車款文章',
+    car_video: '車款影音',
+    more: '看更多'
+}
+
 module.exports = {
     navigation,
+    show,
     social,
     tools,
     goldcar,
-    account
+    account,
+    spec,
+    car
 }
