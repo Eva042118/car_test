@@ -38,10 +38,24 @@ const social = {
     ig: `https://www.instagram.com/tvbsgoldline56/`,
     line: `https://page.line.me/873lmekx`
 }
+
+const index = {
+    
+}
+
 const tools = {
     attractons: `https://news.tvbs.com.tw/events/attractions?from=goldline`,
     freeway: `https://news.tvbs.com.tw/events/freeway?from=goldline`,
     mvdis: `https://www.mvdis.gov.tw/#gsc.tab=0`
+}
+
+const show = {
+    show_1: `${host_url}/category/carshow/munich-carshow2021`,
+    show_2: `${host_url}/category/carshow/shanghai-carshow2021`,
+    show_3: `${host_url}/category/carshow/carshow2022`,
+    show_4: `${host_url}/category/carshow/2023-iaa-mobility`,
+    show_5: `${host_url}/category/carshow/2024-ces`,
+    show_6: `${host_url}/category/carshow/2024%e5%8f%b0%e5%8c%97%e8%bb%8a%e5%b1%95`,
 }
 
 const goldcar = {
@@ -51,17 +65,21 @@ const goldcar = {
     winner: `${host_url}/event/goldcar/winner`,
     show: `${host_url}/tag/2024%E5%8F%B0%E5%8C%97%E8%BB%8A%E5%B1%95?from=goldcar`
 }
+
  const spec = {
-    search_car: 'https://cars.tvbs.com.tw/spec/search/brand_name=audi&car_body=wagon&price_min=250&price_max=400&year[]=2023&fuel=hybrid&per_page=12&page=1'
+    search: `${host_url}/spec/search/brand_name=&car_body=&price_min=&price_max=&fuel=&per_page=12&page=1`,
+    car: `${host_url}/spec/search/brand_name=audi&car_body=wagon&price_min=250&price_max=400&year[]=2023&fuel=hybrid&per_page=12&page=1`
  }
 
  const car = {
-    car_page: 'https://cars.tvbs.com.tw/spec/audi/2023-audi-a4-avant'
+    car_page: `${host_url}/spec/audi/2023-audi-a4-avant`
  }
 module.exports = {
     navigation,
     social,
+    index,
     tools,
+    show,
     goldcar,
     spec,
     car

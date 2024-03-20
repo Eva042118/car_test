@@ -1,7 +1,8 @@
 {
   "version": "1.0",
   "scripts": {
-    "run_test": "codeceptjs run tests/car.js --steps"
+    "run_test": "codeceptjs run --steps",
+    "run_headless": "HEADLESS=true codeceptjs run --steps"
   },
   "dependencies": {
     "codeceptjs": "^3.5.12",

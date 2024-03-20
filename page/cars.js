@@ -150,34 +150,76 @@ module.exports = {
         I.moveCursorTo(locator.navigation.more);
         I.click(locator.navigation.carshow);
         I.seeInCurrentUrl(verify.navigation.carshow);
-        I.see(locator.show.num);
-        I.see(locator.show.category);
-        I.see(locator.show.show_1);
-        I.see(locator.show.show_2);
-        I.see(locator.show.show_3);
-        I.see(locator.show.show_4);
-        I.see(locator.show.show_5);
-        I.see(locator.show.show_6);
-        I.see(locator.show.hot_article);
         // 2024金CAR獎
         I.amOnPage('/');
         I.moveCursorTo(locator.navigation.more);
         I.click(locator.navigation.goldlineweb);
         I.wait(2);
         I.seeInCurrentUrl(verify.navigation.goldlineweb);
-        // 2024金CAR獎-首頁
+    },
+    index() {
+        I.amOnPage('/');
+        I.see(locator.index.hot_car);
+        I.see(locator.index.new_article);
+        I.see(locator.index.hot_article);
+        I.see(locator.index.new_video);
+        I.see(locator.index.news);
+        I.see(locator.index.spec);
+        I.see(locator.index.search);
+        I.see(locator.index.sale);
+        I.see(locator.index.domestic);
+        I.see(locator.index.imported);
+        I.see(locator.index.luxury);
+        I.see(locator.index.talent);
+        I.see(locator.index.tool);
+    },
+    show() {
+        I.amOnPage(verify.navigation.carshow);
+        I.see(locator.show.num);
+        I.see(locator.show.category);
+        I.see(locator.show.hot_article);
+        I.click(locator.show.show_1);
+        I.seeInCurrentUrl(verify.show.show_1);
+        I.see(locator.show.show_1);
+        I.see(locator.show.num);
+        I.see(locator.show.hot_article);
+        I.amOnPage(verify.navigation.carshow);
+        I.click(locator.show.show_2);
+        I.seeInCurrentUrl(verify.show.show_2);
+        I.see(locator.show.show_2);
+        I.amOnPage(verify.navigation.carshow);
+        I.click(locator.show.show_3);
+        I.seeInCurrentUrl(verify.show.show_3);
+        I.see(locator.show.show_3);
+        I.amOnPage(verify.navigation.carshow);
+        I.click(locator.show.show_4);
+        I.seeInCurrentUrl(verify.show.show_4);
+        I.see(locator.show.show_4);
+        I.amOnPage(verify.navigation.carshow);
+        I.click(locator.show.show_5);
+        I.seeInCurrentUrl(verify.show.show_5);
+        I.see(locator.show.show_5);
+        I.amOnPage(verify.navigation.carshow);
+        I.click(locator.show.show_6);
+        I.seeInCurrentUrl(verify.show.show_6);
+        I.see(locator.show.show_6);
+    },
+    goldcar() {
+        // 2024金CAR獎
+        I.amOnPage(verify.navigation.goldlineweb);
+        // 首頁
         I.click(locator.goldcar.index);
         I.seeInCurrentUrl(verify.goldcar.index);
-        // 2024金CAR獎-投票辦法
+        // 投票辦法
         I.click(locator.goldcar.rule);
         I.seeInCurrentUrl(verify.goldcar.rule);
-        // 2024金CAR獎-歷屆票選結果
+        // 歷屆票選結果
         I.click(locator.goldcar.adward);
         I.seeInCurrentUrl(verify.goldcar.adward);
-        // 2024金CAR獎-中獎名單
+        // 中獎名單
         I.click(locator.goldcar.winner);
         I.seeInCurrentUrl(verify.goldcar.winner);
-        // 2024金CAR獎-台北車展直擊
+        // 台北車展直擊
         I.click(locator.goldcar.show);
         I.wait(2);
         I.switchToNextTab();
@@ -237,22 +279,41 @@ module.exports = {
         // 首頁上的汽車規格查詢
         I.amOnPage('/');
         // 品牌
-        I.click(locator.spec.brand);
-        I.click(locator.spec.brand_opt);
+        I.click(locator.spec_index.brand);
+        I.click(locator.spec_index.brand_opt);
         // 能源
-        I.fillField(locator.spec.fuel, locator.spec.fuel_opt);
+        I.fillField(locator.spec_index.fuel, locator.spec_index.fuel_opt);
         I.pressKey(['Enter']);
         // 年份
-        I.fillField(locator.spec.year, locator.spec.year_opt);
+        I.fillField(locator.spec_index.year, locator.spec_index.year_opt);
         I.pressKey(['Enter']);
         // 價格
-        I.fillField(locator.spec.price, locator.spec.price_opt);
+        I.fillField(locator.spec_index.price, locator.spec_index.price_opt);
         I.pressKey(['Enter']);
         // 車型
-        I.click(locator.spec.body_opt);
+        I.click(locator.spec_index.body_opt);
         // 搜尋
+        I.click(locator.spec_index.submit);
+        I.seeInCurrentUrl(verify.spec.car);
+        I.see(locator.spec_index.result);
+        I.see('AUDI');
+        I.see(locator.spec_index.num);
+        I.see('A4 Avant');
+    },
+    spec() {
+        I.amOnPage(verify.spec.search);
+        I.click(locator.spec.brand);
+        I.click(locator.spec.brand_opt);
+        I.click(locator.spec.body);
+        I.click(locator.spec.body_opt);
+        I.click(locator.spec.price);
+        I.click(locator.spec.price_opt);
+        I.click(locator.spec.year);
+        I.click(locator.spec.year_opt);
+        I.click(locator.spec.fuel);
+        I.click(locator.spec.fuel_opt);
         I.click(locator.spec.submit);
-        I.seeInCurrentUrl(verify.spec.search_car);
+        I.seeInCurrentUrl(verify.spec.car);
         I.see(locator.spec.result);
         I.see('AUDI');
         I.see(locator.spec.num);

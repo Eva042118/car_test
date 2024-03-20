@@ -33,6 +33,35 @@ const navigation = {
     hot_article: '熱門文章'
 }
 
+const social = {
+    fb: 'fb-button',
+    youtube: 'youtube-button',
+    ig: 'ig-button',
+    line: 'line-button'
+}
+
+const index = {
+    hot_car: '熱門車款',
+    new_article: '最新文章',
+    hot_article: '熱門文章',
+    new_video: '最新影音',
+    news: '車壇新訊',
+    spec: '汽車規格查詢',
+    search: '搜尋',
+    sale: '銷售排行',
+    domestic: '國產車',
+    imported: '進口車',
+    luxury: '豪華車',
+    talent: '達人談車',
+    tool: '黃金助手'
+}
+
+const tools = {
+    attractons: '即時熱門景點',
+    freeway: '國道即時路況',
+    mvdis: '監理服務網'
+}
+
 const show = {
     num: '篇文章',
     category: '分類選單',
@@ -43,19 +72,6 @@ const show = {
     show_5: '2024 CES',
     show_6: '2024台北車展',
     hot_article: '熱門文章'
-}
-
-const social = {
-    fb: 'fb-button',
-    youtube: 'youtube-button',
-    ig: 'ig-button',
-    line: 'line-button'
-}
-
-const tools = {
-    attractons: '即時熱門景點',
-    freeway: '國道即時路況',
-    mvdis: '監理服務網'
 }
 
 const goldcar = {
@@ -75,7 +91,7 @@ const account = {
     sign_out: '登出'
 }
 
-const spec = {
+const spec_index = {
     brand: '//html/body/main/div[3]/div[1]/section/div/div[2]/form/div[1]/div[1]/button',
     brand_opt: '//html/body/main/div[3]/div[1]/section/div/div[2]/form/div[1]/div[1]/div/div[2]/div/div[2]/div[4]',
     fuel: '選能源',
@@ -86,6 +102,22 @@ const spec = {
     price_opt: '250萬~400萬',
     body_opt: '//html/body/main/div[3]/div[1]/section/div/div[2]/form/div[3]/div[3]/div[1]/img',
     submit: '搜尋',
+    result: '搜尋結果',
+    num: '筆'
+}
+
+const spec = {
+    brand: '全部品牌',
+    brand_opt: '//html/body/div[2]/div/div[2]/div[1]/div[1]/form/div[1]/div/div[2]/div/div[2]/div[4]',
+    body: '//html/body/div[2]/div/div[2]/div[1]/div[1]/form/div[2]/div',
+    body_opt: '//html/body/div[2]/div/div[2]/div[1]/div[1]/form/div[2]/div/div/div/ul/li[3]',
+    price: '//html/body/div[2]/div/div[2]/div[1]/div[1]/form/div[3]/div',
+    price_opt: '//html/body/div[2]/div/div[2]/div[1]/div[1]/form/div[3]/div/div/div/ul/li[6]',
+    year: '//html/body/div[2]/div/div[2]/div[1]/div[1]/form/div[4]/div',
+    year_opt: '//html/body/div[2]/div/div[2]/div[1]/div[1]/form/div[4]/div/div/div/ul/li[5]',
+    fuel: '//html/body/div[2]/div/div[2]/div[1]/div[1]/form/div[5]/div',
+    fuel_opt: '//html/body/div[2]/div/div[2]/div[1]/div[1]/form/div[5]/div/div/div/ul/li[3]',
+    submit: '搜尋車系',
     result: '搜尋結果',
     num: '筆'
 }
@@ -109,11 +141,13 @@ const car = {
 
 module.exports = {
     navigation,
-    show,
     social,
+    index,
     tools,
+    show,
     goldcar,
     account,
+    spec_index,
     spec,
     car
 }
