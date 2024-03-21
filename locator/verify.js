@@ -46,7 +46,7 @@ const index = {
 const tools = {
     attractons: `https://news.tvbs.com.tw/events/attractions?from=goldline`,
     freeway: `https://news.tvbs.com.tw/events/freeway?from=goldline`,
-    mvdis: `https://www.mvdis.gov.tw/#gsc.tab=0`
+    mvdis: `https://www.mvdis.gov.tw/`
 }
 
 const show = {
