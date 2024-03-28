@@ -1,18 +1,68 @@
 Feature('Account');
 
-Scenario('sign in and modify member info', async({I}) => {
-    I.amOnPage('https://member.tvbs.com.tw/index?back_url=https://health.tvbs.com.tw/&site=Health&t=1710744366&uniqid=65f7e32e18555');
-    I.fillField('請輸入註冊 Email', 'wen042118@icloud.com');
-    I.fillField('請輸入密碼', secret('Wen890221'));
+Scenario('facebook sign in from health', ({I}) => {
+    I.amOnPage('https://health.tvbs.com.tw/');
+    I.click('//html/body/div[2]/div/header/div/div[2]/div[2]');
+    I.click('登入/加入會員');
+    I.click('#singinWithFacebook');
+    I.fillField('電子郵件地址或手機號碼','qianwen042118@gmail.com');
+    I.fillField('密碼','Wen225259518');
     I.click('登入');
-    I.wait(2);
-    I.click('//html/body/div[2]/div/header/div/div[2]/div[2]/img');
-    I.click('修改會員資料');
-    I.fillField('nickname', 'Eva');
-    I.fillField('name', 'Qian Wen Xiao');
-    I.fillField('phone', '0912345678');
-    I.click('更新')
-    I.seeInField('nickname', 'Eva');
-    I.seeInField('name', 'Qian Wen Xiao');
-    I.seeInField('phone', '0912345678');
+    I.wait(5);
+    I.seeInCurrentUrl('https://health.tvbs.com.tw/');
+}).retry(3);
+Scenario('google sign in from health', ({I}) => {
+    I.amOnPage('https://health.tvbs.com.tw/');
+    I.click('//html/body/div[2]/div/header/div/div[2]/div[2]');
+    I.click('登入/加入會員');
+    I.click('#singinWithGoogle');
+    I.fillField('電子郵件地址或電話號碼','qianwenxiao@innov.tvbs.com.tw');
+    I.click('下一步');
+    I.fillField('輸入您的密碼','Wen225259518');
+    I.click('下一步');
+    I.wait(5);
+    I.seeInCurrentUrl('https://health.tvbs.com.tw/');
+}).retry(3);
+Scenario('email sign in from health', ({I}) => {
+    I.amOnPage('https://health.tvbs.com.tw/');
+    I.click('//html/body/div[2]/div/header/div/div[2]/div[2]');
+    I.click('登入/加入會員');
+    I.fillField('請輸入註冊 Email','wen042118@icloud.com');
+    I.fillField('請輸入密碼','Wen890221');
+    I.click('登入');
+    I.wait(5);
+    I.seeInCurrentUrl('https://health.tvbs.com.tw/');
+}).retry(3);
+Scenario('facebook sign in from woman', ({I}) => {
+    I.amOnPage('https://woman.tvbs.com.tw/');
+    I.click('//*[@id="root"]/header/div/div[2]/div/div[2]/button');
+    I.click('登入 / 註冊');
+    I.click('#singinWithFacebook');
+    I.fillField('電子郵件地址或手機號碼','qianwen042118@gmail.com');
+    I.fillField('密碼','Wen225259518');
+    I.click('登入');
+    I.wait(5);
+    I.seeInCurrentUrl('https://woman.tvbs.com.tw/');
+}).retry(3);
+Scenario('google sign in from woman', ({I}) => {
+    I.amOnPage('https://woman.tvbs.com.tw/');
+    I.click('//*[@id="root"]/header/div/div[2]/div/div[2]/button');
+    I.click('登入 / 註冊');
+    I.click('#singinWithGoogle');
+    I.fillField('電子郵件地址或電話號碼','qianwenxiao@innov.tvbs.com.tw');
+    I.click('下一步');
+    I.fillField('輸入您的密碼','Wen225259518');
+    I.click('下一步');
+    I.wait(5);
+    I.seeInCurrentUrl('https://woman.tvbs.com.tw/');
+}).retry(3);
+Scenario('email sign in from woman', ({I}) => {
+    I.amOnPage('https://woman.tvbs.com.tw/');
+    I.click('//*[@id="root"]/header/div/div[2]/div/div[2]/button');
+    I.click('登入 / 註冊');
+    I.fillField('請輸入註冊 Email','wen042118@icloud.com');
+    I.fillField('請輸入密碼','Wen890221');
+    I.click('登入');
+    I.wait(5);
+    I.seeInCurrentUrl('https://woman.tvbs.com.tw/');
 }).retry(3);

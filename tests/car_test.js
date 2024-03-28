@@ -7,7 +7,7 @@ Feature('Car');
 Scenario('Navigation bar and category page', ({cars}) => {
     cars.navigationbar()
 }).retry(3);
-
+;
 Scenario('Social button', async({cars}) => {
     cars.socialbtn();
 }).retry(3);

@@ -14,7 +14,7 @@ export const config: CodeceptJS.MainConfig = {
       browser: 'chromium',
       windowSize: '1500 x 1024',
       url: 'https://cars.tvbs.com.tw',
-      show: false
+      show: true
     }
   },
   include: {
